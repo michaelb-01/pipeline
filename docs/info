@@ -1,0 +1,19 @@
+MONGOLAB_URI = mongodb://michaelb01:yellow01@ds023458.mlab.com:23458/mb-loc8r
+
+Heroku:
+
+heroku config:get MONGOLAB_URI
+
+MONGOLAB_URI: 
+
+mongodb://heroku_6tbfdrrz:rkeoi9s692gjnceahl1tmbs7ve@ds023438.mlab.com:23438/heroku_6tbfdrrz
+
+mongodb://<  USERNAME   >:<        PASSWORD        >@<    HOST AND PORT    >/<  DATABASE   >
+
+mongorestore -h ds023438.mlab.com:23438 -d heroku_6tbfdrrz -u heroku_6tbfdrrz -p rkeoi9s692gjnceahl1tmbs7ve ~/tmp/mongodump/Loc8r
+
+
+
+Start in production mode:
+
+NODE_ENV=production MONGOLAB_URI=mongodb://heroku_6tbfdrrz:rkeoi9s692gjnceahl1tmbs7ve@ds023438.mlab.com:23438/heroku_6tbfdrrz nodemon
