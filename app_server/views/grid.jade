@@ -1,0 +1,35 @@
+extends layout
+
+block content
+  #banner.page-header
+
+  .container-fluid
+      .row
+          .clearfix
+              .pull-left
+                   h4 Options:
+              
+              .pull-right
+                  select#asc
+                      option(value="a_z" selected) A - Z
+                      option(value="z_a") Z - A
+
+                  select#filter
+                      option(value="all" selected) All
+                      option(value="blue") Blue
+                      option(value="violet") Violet
+                      option(value="red") Red
+
+          label Search: 
+            input(ng-model="searchText")
+
+          .grid(ng-controller="jobs")
+            .element.col-md-4.col-sm-6.col-xs-12(ng-repeat='job in jobs | filter:searchText')
+              a(href='')
+                .elementBanner
+                  p.elementTitle {{job.name}}
+                  p.elementTag {{job.tag}}
+                .elementFade
+
+                .elementThumb
+                  img(src='/img/thumb/{{job.thumb}}')

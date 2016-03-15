@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  #banner.page-header
+
+  div.row(ng-controller="tasks")
+    div.gridItem(ng-repeat='task in tasks | filter:searchText')
+      div.element.col-sm-4
+        a(href="/tasks/{{ task.taskId }}")
+          div.elementBanner
+            p.elementTitle {{task.taskName}}
+            p.elementTag {{task.taskType}}
+            p.elementTag {{task.discipline}}
+          div.elementFade
+
+          div.elementThumb
+

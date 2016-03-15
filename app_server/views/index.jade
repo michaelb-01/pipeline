@@ -1,5 +1,33 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  #banner.page-header
+
+  input(ng-model="filter")
+
+  .row
+    .animate(ng-repeat='job in data | filter:filter')
+      .element.col-sm-4
+        a(href="/job/{{ job._id }}")
+          .elementBanner
+            p.elementTitle {{job.name | uppercase}}
+            p.elementTag {{job.tag}}
+          .elementFade
+
+          .elementThumb
+            img(src='/img/thumb/{{job.thumb}}')
+
+  .row.archived Archived
+
+  .row
+    div(ng-repeat='job in data')
+      .element.half.col-sm-3
+        a(href='')
+          .elementBanner
+            p.elementTitle {{job.name}}
+            p.elementTag {{job.tag}}
+          .elementFade
+
+          .elementThumb
+            img(src='/img/thumb/{{job.thumb}}')
+
