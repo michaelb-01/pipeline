@@ -12,7 +12,8 @@ mongodb://<  USERNAME   >:<        PASSWORD        >@<    HOST AND PORT    >/<  
 
 mongorestore -h ds023438.mlab.com:23438 -d heroku_6tbfdrrz -u heroku_6tbfdrrz -p rkeoi9s692gjnceahl1tmbs7ve ~/tmp/mongodump/Loc8r
 
-
+set the mongolab:uri
+heroku config:set  MONGOLAB_URI="mongodb://heroku_6tbfdrrz:rkeoi9s692gjnceahl1tmbs7ve@ds023438.mlab.com:23438/heroku_6tbfdrrz"
 
 Start in production mode:
 

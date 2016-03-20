@@ -12,7 +12,7 @@ html(ng-app="app")
 
     link(rel="stylesheet" href="/css/grid.css")
     link(rel="stylesheet" href="/css/style.css")
-  body(ng-controller="appController")
+  body
     .navbar.navbar-default.navbar-fixed-top
       .container
         .navbar-header
@@ -34,23 +34,22 @@ html(ng-app="app")
             li
               a(href='/tasks') Tasks
 
-    block content
+    .container
+      div(ng-view)
+        block content
 
     footer
       .row
         .col-xs-12
           small &copy; Mike Battcock 2016
 
-    script(src='/angular/angular.min.js')
-    script(src="/angular/angular-animate.js")
-    script(src='/angular/app.js')
+    script(src='/angular/angular.js')
+    script(src='/angular/angular-route.min.js')
+    script(src='/angular/angular-route.min.js.map')
+    script(src='/app.js')
+    script(src='/home/home.controller.js')
     script(src='/js/jquery-1.12.1.min.js')
 
     script(src="/js/bootstrap.js")
-    script(src="/js/modernizr.custom.js")
-    script(src="/js/hoverToFocus.js")
-    script(src="/js/proto.js")
-    script(src="/js/gridifier.js")
-
-    //script(src="/js/app-gridifier.js")
+ 
    

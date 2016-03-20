@@ -79,6 +79,10 @@ module.exports.grid = function(req, res){
   });
 };
 
+module.exports.angularApp = function(req, res){
+  res.render('layout', { title: 'TBA' });
+};
+
 var getLocationInfo = function (req, res, callback) {
   var requestOptions, path;
   path = "/api/locations/" + req.params.locationid;

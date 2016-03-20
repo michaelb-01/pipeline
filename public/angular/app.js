@@ -1,4 +1,4 @@
-angular.module('app', ['ngAnimate']);
+angular.module('app', []);
 
 var appController = function ($scope, jobsData) {
   $scope.data = jobsData;

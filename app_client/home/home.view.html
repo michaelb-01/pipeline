@@ -1,0 +1,26 @@
+<div id="banner" class="page-header"></div>
+
+<input ng-model="vm.filter"/>
+
+<div class="row">
+  <div class="animate" ng-repeat='job in vm.jobs | filter:vm.filter'>
+    <div class="element col-sm-4">
+      <a href="/jobs/{{ job._id }}">
+        <div class="elementBanner">
+          <p class="elementTitle"> {{job.name | uppercase}} </p>
+          <p class="elementTag"> {{job.tag}} </p>
+        </div>
+        <div class="elementFade"></div>
+
+        <div class="elementThumb">
+          <img src='/img/thumb/{{job.thumb}}')>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="row archived"> 
+  Archived
+</div>
+
