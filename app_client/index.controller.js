@@ -16,14 +16,16 @@
         });
     };
 
-    $scope.tasksToggle = "";
+    $scope.navHide = "";
 
-    $scope.toggleMyTasks = function() {
-      if ($scope.tasksToggle == "") {
-        $scope.tasksToggle = "toggled";
+    $scope.navToggle = function() {
+      if ($scope.navHide == "") {
+        $scope.navHide = "navHide";
+        console.log('hide nav');
       }
       else {
-        $scope.tasksToggle = "";
+        $scope.navHide = "";
+        console.log('show nav');
       }
     }
 

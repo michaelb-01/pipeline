@@ -27,75 +27,47 @@ body {
  font-family: 'sofia_prolight';
 }
 
-.row {width:100%;}
-
-/*!
- * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
-
-/* Toggle Styles */
-
-#wrapper {
-    padding-left: 0;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+#container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: red;
 }
 
-#wrapper.toggled {
-    padding-left: 250px;
+#main-body {
+  display: flex;
+  flex: 1;
+  background-color: green;
 }
 
-#sidebar-wrapper {
-    z-index: 1000;
-    position: fixed;
-    left: 250px;
-    width: 0;
-    height: 100%;
-    margin-left: -250px;
-    overflow-y: auto;
-    background: #000;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+#main-content {
+  flex: 1;
+  background-color: blue;
 }
 
-#wrapper.toggled #sidebar-wrapper {
-    width: 250px;
+.main-nav {
+  flex: 0 0 200px;
+  order: -1;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
-#page-content-wrapper {
-    width: 100%;
-    position: absolute;
-    padding: 15px;
-}
-
-#wrapper.toggled #page-content-wrapper {
-    position: absolute;
-    margin-right: -250px;
+.navHide {
+  flex: 0 0 0px;
+  background-color: red;
 }
 
 /* Sidebar Styles */
 
 .sidebar-nav {
     position: absolute;
-    top: 0;
-    width: 250px;
-    margin: 0;
     padding: 0;
     list-style: none;
-}
-
-.sidebar .hide {
-  width: 0px;
-}
-
-.sidebar .show {
-  width: 250px;
 }
 
 .sidebar-nav li {
